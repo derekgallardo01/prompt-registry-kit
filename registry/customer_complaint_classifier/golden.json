@@ -1,0 +1,40 @@
+{
+  "description": "Golden eval cases for customer_complaint_classifier. Each case is (input message, expected label from the in_set rubric).",
+  "cases": [
+    {
+      "id": "refund-explicit",
+      "vars": {"message": "I want my money back for order #4421."},
+      "expected": {"in_set": ["refund_request"]}
+    },
+    {
+      "id": "refund-keyword",
+      "vars": {"message": "Please process a refund for the unused portion."},
+      "expected": {"in_set": ["refund_request"]}
+    },
+    {
+      "id": "service-down",
+      "vars": {"message": "The dashboard has been down since 9am - is anyone seeing this?"},
+      "expected": {"in_set": ["service_issue"]}
+    },
+    {
+      "id": "service-broken",
+      "vars": {"message": "The login page is broken on Safari - just hangs after submit."},
+      "expected": {"in_set": ["service_issue"]}
+    },
+    {
+      "id": "billing-charge",
+      "vars": {"message": "I see a charge for $599 I didn't authorize on this month's invoice."},
+      "expected": {"in_set": ["billing_dispute"]}
+    },
+    {
+      "id": "general-feedback",
+      "vars": {"message": "Hi, just wanted to say the new design looks great."},
+      "expected": {"in_set": ["general"]}
+    },
+    {
+      "id": "general-question",
+      "vars": {"message": "Quick question: do you support SAML SSO?"},
+      "expected": {"in_set": ["general"]}
+    }
+  ]
+}

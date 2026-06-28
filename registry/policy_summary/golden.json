@@ -1,0 +1,20 @@
+{
+  "description": "Golden eval cases for policy_summary. v1 must mention the policy's key term; v2 must also include an Action: line. The eval suite verifies BOTH versions individually so you can see v2's stricter contract.",
+  "cases": [
+    {
+      "id": "data-residency",
+      "vars": {"policy_text": "Customer tenant data is stored in the EU. Azure OpenAI calls from Copilot stay within the Microsoft 365 service boundary. No tenant data leaves the EU for model training. This policy covers data residency for all M365 workloads."},
+      "expected": {"contains_all": ["data residency"]}
+    },
+    {
+      "id": "conditional-access",
+      "vars": {"policy_text": "All admin roles must enforce conditional access policies set to 'enabled' not 'report-only'. MFA is required for all admins regardless of network. Service accounts are exempted only with documented justification. This policy covers conditional access enforcement."},
+      "expected": {"contains_all": ["conditional access"]}
+    },
+    {
+      "id": "incident-response",
+      "vars": {"policy_text": "For credential compromise: revoke session tokens, rotate the user's password, require MFA re-registration, audit 14 days of sign-in logs. This policy covers incident response for credential events."},
+      "expected": {"contains_all": ["incident response"]}
+    }
+  ]
+}

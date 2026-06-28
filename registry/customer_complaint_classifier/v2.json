@@ -1,0 +1,9 @@
+{
+  "name": "customer_complaint_classifier",
+  "version": "v2",
+  "template": "You classify customer messages for a support team. Return EXACTLY one label from this set: refund_request, service_issue, billing_dispute, general.\n\nDefinitions:\n- refund_request: customer wants money back\n- service_issue: product is broken / not working / down / showing an error\n- billing_dispute: disagreement about a charge, invoice, or billing line\n- general: anything else (questions, feedback, kudos)\n\nReturn only the label, no other text.\n\nMessage:\n{message}",
+  "model": "claude-haiku-4-5-20251001",
+  "params": {"temperature": 0.0, "max_tokens": 16},
+  "description": "Adds per-class definitions so the model has explicit guardrails. Cuts ambiguous-case misclassification.",
+  "created_at": "2026-06-26T14:30:00Z"
+}

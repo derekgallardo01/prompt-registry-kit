@@ -1,0 +1,9 @@
+{
+  "name": "meeting_recap",
+  "version": "v1",
+  "template": "Write a recap of the meeting with three sections: Summary, Decisions, Action items.\n\nTranscript:\n{transcript}",
+  "model": "claude-haiku-4-5-20251001",
+  "params": {"temperature": 0.0, "max_tokens": 600},
+  "description": "Initial version. Three-section recap with no structure on action items.",
+  "created_at": "2026-06-18T09:30:00Z"
+}

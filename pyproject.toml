@@ -1,0 +1,27 @@
+[project]
+name = "prompt-registry"
+version = "1.0.0"
+description = "Versioned prompt registry with A/B variants, eval-gated promotion, and instant rollback. The production-ops piece every LLM build needs once 'we changed the prompt' becomes the most common root cause of outages."
+authors = [{name = "Derek Gallardo", email = "derekgallardo01@gmail.com"}]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+llm = [
+    "anthropic>=0.40.0",
+]
+
+[project.scripts]
+prompt-registry = "prompt_registry.cli:main"
+
+[project.urls]
+Repository = "https://github.com/derekgallardo01/prompt-registry-kit"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

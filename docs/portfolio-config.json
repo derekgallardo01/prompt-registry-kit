@@ -1,0 +1,12 @@
+{
+  "repo": "prompt-registry-kit",
+  "title": "Prompt Registry Kit",
+  "tagline": "Versioned prompt registry with A/B variants, eval-gated promotion, and instant rollback. The production-ops piece every LLM build needs once 'we changed the prompt' becomes the most common root cause of outages.",
+  "kicker": "LLM Ops · Versioning · Eval-Gated · Capability Demo",
+  "features": [
+    {"label": "Bundled prompts", "value": "3 × 2 versions"},
+    {"label": "Rubric types", "value": "5 (in_set, exact, contains, regex)"},
+    {"label": "Tests + Evals", "value": "36 pytest + 12 golden"}
+  ],
+  "theme": {"primary": "#0e7490", "accent": "#06b6d4"}
+}

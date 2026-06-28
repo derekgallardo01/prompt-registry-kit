@@ -1,0 +1,20 @@
+Registry root: I:\Projects\upwork\standalone\prompt-registry-kit\registry
+
+=== customer_complaint_classifier ===
+  active: v1   latest: v2
+  active eval:  7/7 (100%)
+  latest eval:  7/7 (100%)
+  -> latest passes evals; safe to promote.
+
+=== meeting_recap ===
+  active: v1   latest: v2
+  active eval:  2/2 (100%)
+  latest eval:  2/2 (100%)
+  -> latest passes evals; safe to promote.
+
+=== policy_summary ===
+  active: v1   latest: v2
+  active eval:  3/3 (100%)
+  latest eval:  3/3 (100%)
+  -> latest passes evals; safe to promote.
+

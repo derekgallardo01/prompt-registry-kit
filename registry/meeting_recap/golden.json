@@ -1,0 +1,15 @@
+{
+  "description": "Golden eval cases for meeting_recap. v1 requires the three section headers. v2 additionally requires every action-item line to start with [Owner] - this is the stricter contract that gates promotion.",
+  "cases": [
+    {
+      "id": "recap-shape",
+      "vars": {"transcript": "Alice opened with the quarterly plan. Bob raised concerns about the partner data feed. After discussion the group agreed to proceed with the proposal as written. Alice will draft the spec; Bob will coordinate with the partner team."},
+      "expected": {"contains_all": ["Summary:", "Decisions:", "Action items:"]}
+    },
+    {
+      "id": "recap-decision",
+      "vars": {"transcript": "The team reviewed three vendor options for the data pipeline. After discussion the group decided to proceed with vendor C subject to a 30-day trial. Carol will negotiate the trial terms."},
+      "expected": {"contains_any": ["proceed", "decided", "decision"]}
+    }
+  ]
+}
