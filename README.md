@@ -40,6 +40,14 @@ docker run --rm prompt-registry pytest -q        # runs the tests
 docker run --rm -v $(pwd)/registry:/app/registry prompt-registry prompt-registry list
 ```
 
+## Example: production scenario
+
+**[examples/ci_promote_gate.py](examples/ci_promote_gate.py)** — CI-ready promote workflow: eval-then-promote with GitHub Actions step-summary output. Exit 0 promotes, non-zero blocks
+
+```bash
+python examples/ci_promote_gate.py
+```
+
 ## What it's for
 
 The team has 30 LLM features in production. Each one has a prompt. Each
